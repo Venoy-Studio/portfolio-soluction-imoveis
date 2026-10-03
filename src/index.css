@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 33% 98%;
+    --foreground: 213 50% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 213 50% 11%;
+    --primary: 211 82% 25%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 211 65% 35%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 210 25% 95%;
+    --muted-foreground: 213 20% 45%;
+    --accent: 40 90% 61%;
+    --accent-foreground: 213 50% 11%;
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --radius: 0.75rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, hsl(40, 90%, 61%), hsl(43, 96%, 70%));
+}
+
+.card-lift {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px -12px hsla(213, 50%, 11%, 0.16);
+}
+
+.btn-premium {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.75rem;
+  border-radius: 9999px;
+  background-color: hsl(211, 82%, 25%);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.025em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(11, 63, 115, 0.25);
+}
+
+.btn-premium:hover {
+  background-color: hsl(211, 82%, 20%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(11, 63, 115, 0.35);
+}
+
+.btn-glow:hover {
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+}
+
+.btn-outline-premium {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.75rem;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-premium:hover {
+  background-color: #ffffff;
+  color: hsl(211, 82%, 25%);
+  transform: translateY(-2px);
+}
+
+.badge-venda {
+  background: linear-gradient(135deg, #0c3f74, #13559b);
+  color: #ffffff;
+}
+
+.badge-aluguel {
+  background: linear-gradient(135deg, #15803d, #22c55e);
+  color: #ffffff;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
